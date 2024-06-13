@@ -6,14 +6,12 @@ import './Compliance.css';
 
 const compliancePage = () => {
   return (
-    <>
-    <div>Compliance</div>
-    <MainPagesNavbar data={CompilanceRoutesLinks}/>
-    <div className='Section'>
-         <Outlet/>
+    <div className='MainPage'>
+      <MainPagesNavbar data={CompilanceRoutesLinks}/>
+      <div className='MainPageRightSection'>
+          <Outlet/>
+        </div>
       </div>
-    </>
-    
   )
 }
 

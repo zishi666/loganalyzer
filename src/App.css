@@ -1,0 +1,305 @@
+/* //////////////// Parent Navbar CSS code starts from here  ///////////////// */
+
+.NavbarParentHeader{
+    position: absolute;
+    background: transparent;
+    height: 75px;
+    width: 100%;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+}
+
+.LeftSizedBox{
+    width: 32%;
+}
+
+.RightSizedBox{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.RightSizedBox>.userSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: blue; */
+    width: 95%;
+    margin-right: 15px;
+}
+
+.RightSizedBox>.userSection>.userImage{
+    height: 100%;
+    width: 30.5%;
+    height: 3.6rem;
+    background: #70ABAF;
+    border-radius: 3rem;
+    background-image: url('./Asset/userLogo.svg');
+    background-size: 55%; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-position: center;
+
+    margin-right: 15px;
+    margin-top: 5px
+}
+
+.RightSizedBox>.userSection>.dropDown{
+    width: 14%;
+    height: 4rem;
+    border-radius: 3rem;
+    background-image: url('./Asset/dropDown.svg');
+    background-size: 65%; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-position: center;
+
+    margin-top: 10px;
+}
+
+.AllPagesLinks{
+    background: #32292F;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.NavbarParentHeader>.AllPagesLinks>ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    /* background: red; */
+    width: 45em;
+
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    
+}
+
+.NavbarParentHeader>.AllPagesLinks>ul>li>a{
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 21px;
+}
+
+.NavbarParentHeader>.AllPagesLinks>ul>li>a.MainPageActiveLink{
+    color: #99E1D9;
+}
+
+/* //////////////// Parent Nave bar code Ends here  //////////////////*/
+
+/* ////////////////  Main page Css code starts from here  ////////////////// */
+
+.MainPage{
+    display: flex;
+}
+
+  /* /////  Left Side of main Page (Side bar css)  /////// */
+
+.MainPageLeftSection{
+    background: #32292F;
+    height: 100vh;
+    width: 19%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: #FCF9F9;
+}
+
+.upperSection{
+    height: 70%;
+    /* background: red; */
+}
+
+.upperSection>.logoSection{
+    /* background: #70ABAF; */
+    height: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperSection>.logoSection>img{
+    height: 41%;
+    z-index: 9;
+    cursor: pointer;
+
+}
+
+.upperSection>.logoSection>.SiteName{
+    font-family: "Baloo Tamma 2", system-ui;
+    font-size: 1.7rem;
+    font-weight: 700;
+
+    margin-top: 13px;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.upperSection>.subLinksSection{
+    /* background:#99E1D9; */
+    height: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperSection>.subLinksSection>ul{
+    /* background: red; */
+    list-style: none;
+
+    width: 70%;
+}
+
+.upperSection>.subLinksSection>ul>li{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.upperSection>.subLinksSection>ul>li>a{
+    color: #FCF9F9;
+    text-decoration: none;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 500;
+}
+
+.upperSection>.subLinksSection>ul>li>a.activeSubLink{
+    color: #99E1D9;
+}
+
+.lowerSection{
+    /* background: blue; */
+    height: 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.lowerSection>img{
+    height: 24px;
+    cursor: pointer;
+    margin-left: 20%;
+}
+
+.lowerSection>div{
+    align-self: center;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight:500;
+    margin-left: 13px;
+    cursor: pointer;
+}
+
+    /* /////  Right Side of main Page (Data pages rendering side css)  /////// */
+
+.MainPageRightSection{
+    width: 81%;
+    height: 100vh;
+    background:#D9D9D9;
+}
+
+      /* ////// Upper white Section having search bar etc ///////// */
+.MainPageRightSection>.mainPageUpperSection{
+    /* background: red; */
+    height: 21.5%;
+
+    display: flex;
+    align-items: end;
+}
+
+.mainPageUpperSection>div{
+    height: 46%;
+    width: 100%;
+    background: #FFFFFF;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainPageUpperSection>div>.textSection{
+    margin-left: 35px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.mainPageUpperSection>div>.searchSection{
+    /* background: red; */
+    width: 37%;
+    height: 60%;
+
+    margin-right: 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchSection>.searchBar{
+    height: 100%;
+
+    width: 90%;
+    background: #F7F7F8;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 25px;
+}
+
+.searchSection>.searchBar>img{
+    height: 50%;
+    margin-left: 15px;
+}
+
+.searchSection>.searchBar>input{
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin-left: 10px;
+    
+}
+
+.searchSection>.searchBar>input::placeholder{
+    color: A3A3A4;
+}
+
+.searchSection>img{
+    height: 50%;
+}
+
+/* ///////////////// main page Original data page section (having data related pages)  ////////////// */
+
+.MainPageRightSection>.mainPageLowerDataSection{
+    /* background-color: red; */
+    height: 78.5%;
+    
+    /* //Remove this css coding while designing actuall pages */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ////////////////  Main page Css code Ends from here  ////////////////// */
+

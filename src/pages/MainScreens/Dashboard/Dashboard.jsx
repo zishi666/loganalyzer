@@ -6,13 +6,12 @@ import { DashboardRoutesLink } from '../../../components/SubpagesRoutes';
 
 const dashboardPage = () => {
   return (
-    <>
-      <div>Dashbord</div>
+    <div className='MainPage'>
       <MainPagesNavbar data={DashboardRoutesLink}/>
-      <div className='Section'>
+      <div className='MainPageRightSection'>
          <Outlet/>
       </div>
-    </>
+    </div>
     
   )
 }

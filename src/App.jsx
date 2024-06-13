@@ -12,6 +12,7 @@ import { RiskPosturePage, ConfiguredPage, ManagementPage, SchedulePage } from ".
 import { SelectViewPage, AddAlertEmailPage, ExportAsPage, CustomAlertPage } from "./pages/MainScreens/Alerts/AlertSubPages";
 import { LogConfigurationPage, AdminSettingsPage, SystemSettingPage } from "./pages/MainScreens/Settings/SettingSubPages";
 import { SupportDummyPage } from "./pages/MainScreens/Support/SupportSubPages";
+import './App.css';
 
 
 function App() {

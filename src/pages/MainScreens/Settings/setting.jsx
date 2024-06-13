@@ -6,14 +6,12 @@ import './Setting.css';
 
 const settingPage = () => {
   return (
-    <>
-    <div>Setting</div>
-    <MainPagesNavbar data={SettingsRoutesLinks}/>
-    <div className='Section'>
-         <Outlet/>
-      </div>
-    </>
-    
+    <div className='MainPage'>
+      <MainPagesNavbar data={SettingsRoutesLinks}/>
+      <div className='MainPageRightSection'>
+          <Outlet/>
+        </div>
+    </div>
   )
 }
 

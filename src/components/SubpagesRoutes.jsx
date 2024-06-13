@@ -2,8 +2,8 @@
 export const DashboardRoutesLink = [
       ['/', 'Main Events'],
       ['dhcpLogs', 'DHCP Logs'],
-      ['dnsLogs', 'Dns Logs'],
-      ['ldapLogs', 'Ldap logs'],
+      ['dnsLogs', 'DNS Logs'],
+      ['ldapLogs', 'LDAP logs'],
       ['securityEvents', 'Security Events'],
       ['linuxEvents', 'Linux Events'],
       ['logSeverityEvents', 'Log Severity Events']

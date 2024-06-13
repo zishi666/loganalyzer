@@ -1,10 +1,13 @@
 import React from 'react';
-
+import { HeroBandSection } from '../../../components/HeroBandSection';
 
 //Main Event define here
 export const MainEventsPage = () => {
   return (
-    <div>MainEventsPage</div>
+  <>
+    <HeroBandSection text='Main Events'/>
+    <div className='mainPageLowerDataSection'>MainEventsPage</div>
+  </>
   )
 }
 
@@ -12,35 +15,50 @@ export const MainEventsPage = () => {
 //DHCP logs define here
 export const DhcpLogsPage = () => {
   return (
-    <div>DhcpLogsPage</div>
+    <>
+    <HeroBandSection text='DHCP Logs'/>
+    <div className='mainPageLowerDataSection'>DhcpLogsPage</div>
+    </>
   )
 }
 
 //Dns Logs define here
 export const DnsLogsPage = () => {
   return (
-    <div>DnsLogsPage</div>
+    <>
+    <HeroBandSection text='DNS Logs'/>
+    <div className='mainPageLowerDataSection'>DnsLogsPage</div>
+    </>
   )
 }
 
 //LDAP logs define here
 export const LdapLogsPage = () => {
   return (
-    <div>LdapLogsPage</div>
+    <>
+    <HeroBandSection text='LDAP logs'/>
+    <div className='mainPageLowerDataSection'>LdapLogsPage</div>
+    </>
   )
 }
 
 //Security Events define here
 export const SecurityEventsPage = () => {
   return (
-    <div>SecurityEventsPage</div>
+    <>
+    <HeroBandSection text='Security Events'/>
+    <div className='mainPageLowerDataSection'>SecurityEventsPage</div>
+    </>
   )
 }
 
 //Linux Events define here
 export const LinuxEventsPage = () => {
   return (
-    <div>LinuxEventsPage</div>
+    <>
+    <HeroBandSection text='Linux Events'/>
+    <div className='mainPageLowerDataSection'>LinuxEventsPage</div>
+    </>
   )
 }
 
@@ -48,7 +66,10 @@ export const LinuxEventsPage = () => {
 //Log severity define here
 export const LogSeverityEventPage = () => {
   return (
-    <div>LogSeverityEventPage</div>
+    <>
+    <HeroBandSection text='Log Severity Events'/>
+    <div className='mainPageLowerDataSection'>LogSeverityEventPage</div>
+    </>
   )
 }
 

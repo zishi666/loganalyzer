@@ -1,10 +1,14 @@
 import React from 'react';
+import { HeroBandSection } from '../../../components/HeroBandSection';
 
 
 //All Events define here
 export const AllEventsPage = () => {
   return (
-    <div>AllEventsPage</div>
+    <>
+    <HeroBandSection text="All Events"/>
+    <div className='mainPageLowerDataSection'>AllEventsPage</div>
+    </>
   )
 }
 
@@ -12,7 +16,10 @@ export const AllEventsPage = () => {
 //Trend Reports define here
 export const TrendReportPage = () => {
   return (
-    <div>TrendReportPage</div>
+    <>
+    <HeroBandSection text="Trend Reports"/>
+    <div className='mainPageLowerDataSection'>TrendReportPage</div>
+    </>
   )
 }
 
@@ -20,7 +27,10 @@ export const TrendReportPage = () => {
 //Device Severity define here
 export const DeviceSeverityReportPage = () => {
   return (
-    <div>DeviceSeverityReportPage</div>
+    <>
+    <HeroBandSection text="Device Severity Report"/>
+    <div className='mainPageLowerDataSection'>DeviceSeverityReportPage</div>
+    </>
   )
 }
 
@@ -28,7 +38,10 @@ export const DeviceSeverityReportPage = () => {
 //System Event define here
 export const SystemEventPage = () => {
   return (
-    <div>SystemEventPage</div>
+    <>
+    <HeroBandSection text="System Events"/>
+    <div className='mainPageLowerDataSection'>SystemEventPage</div>
+    </>
   )
 }
 
@@ -36,7 +49,10 @@ export const SystemEventPage = () => {
 //Linux Setup define here
 export const LinuxSetupPage = () => {
   return (
-    <div>LinuxSetupPage</div>
+    <>
+    <HeroBandSection text="Linux Setup Events"/>
+    <div className='mainPageLowerDataSection'>LinuxSetupPage</div>
+    </>
   )
 }
 
@@ -44,6 +60,9 @@ export const LinuxSetupPage = () => {
 //Manage Reportt define here
 export const ManageReportPage = () => {
   return (
-    <div>ManageReportPage</div>
+    <>
+    <HeroBandSection text="Manage Reports"/>
+    <div className='mainPageLowerDataSection'>ManageReportPage</div>
+    </>
   )
 }

@@ -6,14 +6,12 @@ import './Alert.css';
 
 const alertPage = () => {
   return (
-    <>
-    <div>Alert</div>
-    <MainPagesNavbar data={AlertsRoutesLinks}/>
-    <div className='Section'>
-         <Outlet/>
+    <div className='MainPage'>
+      <MainPagesNavbar data={AlertsRoutesLinks}/>
+      <div className='MainPageRightSection'>
+          <Outlet/>
+        </div>
       </div>
-    </>
-    
   )
 }
 

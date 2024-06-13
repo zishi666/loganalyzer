@@ -6,14 +6,12 @@ import './Support.css';
 
 const supportPage = () => {
   return (
-    <>
-    <div>Support</div>
-    <MainPagesNavbar data={SupportRoutesLinks}/>
-    <div className='Section'>
-         <Outlet/>
-      </div>
-    </>
-    
+    <div className='MainPage'>
+      <MainPagesNavbar data={SupportRoutesLinks}/>
+      <div className='MainPageRightSection'>
+          <Outlet/>
+        </div>
+    </div>
   )
 }
 

@@ -1,10 +1,13 @@
 import React from 'react';
-
+import { HeroBandSection } from '../../../components/HeroBandSection';
 
 //Risk Posture Page define here
 export const RiskPosturePage = () => {
   return (
-    <div>RiskPosturePage</div>
+    <>
+    <HeroBandSection text="Risk Posture"/>
+    <div className='mainPageLowerDataSection'>RiskPosturePage</div>
+    </>
   )
 }
 
@@ -12,7 +15,10 @@ export const RiskPosturePage = () => {
 //Configured page define here
 export const ConfiguredPage = () => {
   return (
-    <div>ConfiguredPage</div>
+    <>
+    <HeroBandSection text="Configured"/>
+    <div className='mainPageLowerDataSection'>ConfiguredPage</div>
+    </>
   )
 }
 
@@ -20,7 +26,10 @@ export const ConfiguredPage = () => {
 //Manage Page define here
 export const ManagementPage = () => {
   return (
-    <div>ManagementPage</div>
+    <>
+    <HeroBandSection text="Management"/>
+    <div className='mainPageLowerDataSection'>ManagementPage</div>
+    </>
   )
 }
 
@@ -28,6 +37,9 @@ export const ManagementPage = () => {
 //Schedule page define here
 export const SchedulePage = () => {
   return (
-    <div>SchedulePage</div>
+    <>
+    <HeroBandSection text="Schedule"/>
+    <div className='mainPageLowerDataSection'>SchedulePage</div>
+    </>
   )
 }

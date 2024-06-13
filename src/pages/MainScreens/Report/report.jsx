@@ -6,14 +6,12 @@ import './Report.css';
 
 const reportPage = () => {
   return (
-    <>
-    <div>Report</div>
-    <MainPagesNavbar data={ReportRoutesLinks}/>
-    <div className='Section'>
-         <Outlet/>
-      </div>
-    </>
-    
+    <div className='MainPage'>
+      <MainPagesNavbar data={ReportRoutesLinks}/>
+      <div className='MainPageRightSection'>
+          <Outlet/>
+        </div>
+    </div>
   )
 }
 

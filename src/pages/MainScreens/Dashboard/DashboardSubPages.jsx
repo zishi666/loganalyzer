@@ -1,12 +1,23 @@
 import React from 'react';
+import { useNavigate, Link } from "react-router-dom";
 import { HeroBandSection } from '../../../components/HeroBandSection';
 
 //Main Event define here
 export const MainEventsPage = () => {
+  const navigate = useNavigate();
+
+  const navigateToChild = (id) => {
+    navigate(`${id}`);
+  }
+
   return (
   <>
     <HeroBandSection text='Main Events'/>
-    <div className='mainPageLowerDataSection'>MainEventsPage</div>
+    <div className='mainPageLowerDataSection'> 
+       <button onClick={() => navigateToChild('test1Page')}> Button 1</button>
+       <button onClick={() => navigateToChild('test2Page')}> Button 2</button>
+       <button onClick={() => navigateToChild('test3Page')}> Button 3</button>
+    </div>
   </>
   )
 }

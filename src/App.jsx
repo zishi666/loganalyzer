@@ -12,6 +12,7 @@ import { RiskPosturePage, ConfiguredPage, ManagementPage, SchedulePage } from ".
 import { SelectViewPage, AddAlertEmailPage, ExportAsPage, CustomAlertPage } from "./pages/MainScreens/Alerts/AlertSubPages";
 import { LogConfigurationPage, AdminSettingsPage, SystemSettingPage } from "./pages/MainScreens/Settings/SettingSubPages";
 import { SupportDummyPage } from "./pages/MainScreens/Support/SupportSubPages";
+import { TestComponent } from "./components/textComponent";
 import './App.css';
 
 
@@ -30,6 +31,7 @@ function App() {
                   <Route path="securityEvents" element={<SecurityEventsPage/>}/>
                   <Route path="linuxEvents" element={<LinuxEventsPage/>}/>
                   <Route path="logSeverityEvents" element={<LogSeverityEventPage/>}/>
+                  <Route path=":id" element={<TestComponent/>}/>
               </Route>
 
               <Route path="/report" element={<ReportPage/>}>

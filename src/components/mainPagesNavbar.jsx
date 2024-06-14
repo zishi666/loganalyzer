@@ -2,17 +2,32 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../Asset/Logo.svg';
 import LogoutImag from '../Asset/logout.svg';
+import manu from '../Asset/burgerManu.svg';
 
 const MainPagesNavbar = ({ data, iconImag }) => {
 
   const [activeLink, setActiveLink] = useState(data[0][0]);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   const handleLinkClick = (event, link) => {
     setActiveLink(link);
+    handleShpwingSideBar()
+  };
+
+  const handleShpwingSideBar = () => {
+     if (showSidebar) {
+        setShowSidebar(false);
+     }
+     else{
+      setShowSidebar(true);
+     }
   };
 
   return (
-    <nav className='MainPageLeftSection'>
+    <nav className={'MainPageLeftSection ' + (showSidebar ? 'showSide' : '') }>
+       <div className={"sideBarButton " + (showSidebar ? 'Move' : '')} onClick={handleShpwingSideBar}>
+               <img src={manu} alt="" />
+           </div>
       <div className='upperSection'>
         <div className='logoSection'>
           <img className='Logo' src={Logo} alt="" />

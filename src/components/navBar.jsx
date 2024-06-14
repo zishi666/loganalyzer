@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import dropIcon from '../Asset/dropDown.svg';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('/');
+  const [showBar, setShowBar] = useState(false);
 
   const handleLinkClick = (path) => {
     setActiveLink(path);
+  };
+
+  const handleBarVisibility = () => {
+    if (showBar) {
+      setShowBar(false);
+    }
+    else{
+      setShowBar(true);
+    }
   };
 
   return (
@@ -13,7 +24,7 @@ export const NavBar = () => {
       <header className='NavbarParentHeader'>
         <div className='LeftSizedBox'></div>
 
-        <nav className='AllPagesLinks'>
+        <nav className={'AllPagesLinks ' + (showBar ? 'showMainPagesData' : '')}>
           <ul>
             <li>
               <Link
@@ -75,7 +86,9 @@ export const NavBar = () => {
         <div className='RightSizedBox'>
           <div className='userSection'>
             <div className='userImage'></div>
-            <div className='dropDown'></div>
+            <div className='dropDown'>
+              <img onClick={handleBarVisibility} src={dropIcon} alt="" />
+            </div>
           </div>
         </div>
       </header>

@@ -1,8 +1,23 @@
+body {
+    overflow: hidden;
+}
+/* ///////// Side bar Button  //////////// */
+
+.sideBarButton{
+position: absolute;
+ width: 35px;
+ height: 35px;
+ background: red;
+ z-index: 10;
+ 
+ display: none;
+}
+
 /* //////////////// Parent Navbar CSS code starts from here  ///////////////// */
 
 .NavbarParentHeader{
     position: absolute;
-    background: transparent;
+    /* background: red; */
     height: 75px;
     width: 100%;
 
@@ -32,11 +47,11 @@
 }
 
 .RightSizedBox>.userSection>.userImage{
-    height: 100%;
-    width: 30.5%;
-    height: 3.6rem;
+    height: 60px;
+    width: 60px;
+    /* height: 3.6rem; */
     background: #70ABAF;
-    border-radius: 3rem;
+    border-radius: 30px;
     background-image: url('./Asset/userLogo.svg');
     background-size: 55%; /* Adjust the size of the background image */
     background-repeat: no-repeat; /* Prevent the background from repeating */
@@ -49,17 +64,20 @@
 }
 
 .RightSizedBox>.userSection>.dropDown{
+    /* background: red; */
     width: 14%;
     height: 4rem;
     border-radius: 3rem;
-    background-image: url('./Asset/dropDown.svg');
-    background-size: 65%; /* Adjust the size of the background image */
-    background-repeat: no-repeat; /* Prevent the background from repeating */
-    background-position: center;
-
     margin-top: 10px;
-
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RightSizedBox>.userSection>.dropDown>img{
+    height: 13%;
 }
 
 .AllPagesLinks{
@@ -97,7 +115,10 @@
 
 .NavbarParentHeader>.AllPagesLinks>ul>li>a.MainPageActiveLink{
     color: #99E1D9;
-}
+}   
+                   
+
+
 
 /* //////////////// Parent Nave bar code Ends here  //////////////////*/
 
@@ -166,12 +187,12 @@
     /* background: red; */
     list-style: none;
 
-    width: 70%;
+    width: 80%;
 }
 
 .upperSection>.subLinksSection>ul>li{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 .upperSection>.subLinksSection>ul>li>img{
@@ -230,12 +251,13 @@
       /* ////// Upper white Section having search bar etc ///////// */
 .MainPageRightSection>.mainPageUpperSection{
     /* background: red; */
-    height: 21.5%;
+    height: 22.0%;
 
     display: flex;
     align-items: end;
 }
-
+ 
+        /* /////White band section div /////// */
 .mainPageUpperSection>div{
     height: 46%;
     width: 100%;
@@ -256,7 +278,7 @@
 .mainPageUpperSection>div>.searchSection{
     /* background: red; */
     width: 37%;
-    height: 60%;
+    height: 50%;
 
     margin-right: 35px;
 
@@ -269,7 +291,7 @@
     height: 100%;
 
     width: 90%;
-    background: #F7F7F8;
+    background: #eaeaf0;
 
     display: flex;
     align-items: center;
@@ -291,7 +313,7 @@
     background: transparent;
 
     font-family: "Poppins", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 10px;
     
 }
@@ -304,7 +326,7 @@
     height: 50%;
 }
 
-/* ///////////////// main page Original data page section (having data related pages)  ////////////// */
+/* ///////////////// main page lower section Original data page (having data related pages)  ////////////// */
 
 .MainPageRightSection>.mainPageLowerDataSection{
     /* background-color: red; */
@@ -318,3 +340,349 @@
 
 /* ////////////////  Main page Css code Ends from here  ////////////////// */
 
+
+
+/* /////////////////// All media Queries for main Frame ///////////////////// */
+
+@media (max-width: 1310px) {
+
+    .upperSection>.subLinksSection>ul>li{
+        margin-top: 15px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .upperSection>.subLinksSection>ul>li>img{
+        height: 0.8em !important;
+    }
+    
+    .upperSection>.subLinksSection>ul>li>a{
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    .lowerSection>img{
+        height: 1.0em !important;
+    }
+    
+    .lowerSection>div{
+        font-size: 15px;
+        margin-left: 9px;
+    }
+
+}
+
+
+@media (max-width: 1165px) {
+
+    .RightSizedBox>.userSection>.userImage{
+        height: 45px !important;
+        width: 45px !important;
+    }
+
+    .NavbarParentHeader>.AllPagesLinks>ul{
+        /* background: blue; */
+        width: 39rem;
+        
+    }
+
+    .NavbarParentHeader>.AllPagesLinks>ul>li>a{
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        font-weight: 600 !important;
+        font-size: 18px !important;
+    }
+
+
+.upperSection>.logoSection>img{
+    height: 29% !important;
+}
+
+.upperSection>.logoSection>.SiteName{
+    font-size: 1.4rem;
+
+    margin-top: 27px !important;
+}
+
+.upperSection>.subLinksSection>ul>li{
+    margin-top: 13px !important;
+    margin-bottom: 13px !important;
+}
+
+.upperSection>.subLinksSection>ul>li>img{
+    height: 0.7em !important;
+}
+
+.upperSection>.subLinksSection>ul>li>a{
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.lowerSection>img{
+    height: 0.8em !important;
+}
+
+.lowerSection>div{
+    font-size: 13px;
+    margin-left: 7px;
+}
+
+}
+
+@media (max-width: 1002px) {
+    .NavbarParentHeader>.AllPagesLinks>ul{
+        /* background: blue; */
+        width: 34rem;
+        
+    }
+
+    .NavbarParentHeader>.AllPagesLinks>ul>li>a{
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+    }
+
+    .upperSection>.logoSection>img{
+        height: 25% !important;
+    }
+    
+    .upperSection>.logoSection>.SiteName{
+        font-size: 1.4rem;
+        font-weight: 700;
+    
+        margin-top: 27px !important;
+    }
+
+    .upperSection>.logoSection>img{
+        height: 26% !important;
+    }
+    
+    .upperSection>.logoSection>.SiteName{
+        font-size: 1.2rem;
+    }
+
+    .upperSection>.subLinksSection>ul>li{
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .upperSection>.subLinksSection>ul>li>img{
+        height: 0.7em !important;
+    }
+    
+    .upperSection>.subLinksSection>ul>li>a{
+        font-weight: 500;
+        font-size: 10px;
+    }
+
+    .lowerSection>img{
+        height: 0.7em !important;
+    }
+    
+    .lowerSection>div{
+        font-size: 10px;
+        margin-left: 6px;
+    }
+
+    .mainPageUpperSection>div>.textSection{
+        font-size: 1.9rem;
+    }
+
+    .searchSection>.searchBar{
+        height: 90%;
+        border-radius: 20px;
+    }
+    
+    .searchSection>.searchBar>img{
+        height: 45%;
+        margin-left: 12px;
+    }
+    
+    .searchSection>.searchBar>input{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    
+    .searchSection>img{
+        height: 40% !important;
+    }
+    
+}
+
+@media (max-width: 860px) {
+
+    .RightSizedBox>.userSection>.userImage{
+        height: 35px !important;
+        width: 35px !important;
+    }
+
+
+    .NavbarParentHeader>.AllPagesLinks>ul{
+        /* background: blue; */
+        width: 28rem;
+        
+    }
+
+    .NavbarParentHeader>.AllPagesLinks>ul>li>a{
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        font-weight: 500 !important;
+        font-size: 10px !important;
+    }
+
+    .upperSection>.logoSection>img{
+        height: 20% !important;
+    }
+    
+    .upperSection>.logoSection>.SiteName{
+        font-size: 1.0rem;
+    }
+
+    .mainPageUpperSection>div>.textSection{
+        font-size: 1.5rem;
+    }
+
+    .searchSection>.searchBar{
+        height: 80%;
+        border-radius: 15px;
+    }
+    
+    .searchSection>.searchBar>img{
+        height: 40%;
+        margin-left: 10px;
+    }
+    
+    .searchSection>.searchBar>input{
+        font-size: 12px;
+        margin-left: 8px;
+    }
+    
+    .searchSection>img{
+        height: 35% !important;
+    }
+}
+
+@media (max-height: 570px){
+    .MainPageRightSection>.mainPageUpperSection{
+           height: 26% !important;
+    }
+    .MainPageRightSection>.mainPageLowerDataSection{
+        height: 74% !important;
+    }
+}
+
+@media (max-width: 715px){
+    .MainPageLeftSection{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .showSide{
+        visibility: visible !important;
+    }
+
+    .MainPageRightSection{
+        width: 100% !important;
+    }
+
+    .MainPage{
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .sideBarButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         visibility: visible;
+
+         top: 20px;
+         left: 20px;
+
+         background: #32292F;
+
+         border-radius: 7px;
+
+         cursor: pointer;
+        }
+
+        .sideBarButton>img{
+            height: 40%;
+        }
+
+        .Move{
+            left: 105% !important;
+        }
+
+        .upperSection>.logoSection>.SiteName{
+           display: none;
+        }
+
+        
+        .NavbarParentHeader{
+            /* visibility: hidden; */
+            display: flex;
+            flex-direction: column;
+            /* background: red; */
+
+            align-items: end;
+        }
+
+        
+        .LeftSizedBox{
+            display: none;
+        }
+
+        .AllPagesLinks{
+            visibility: hidden;
+            width: fit-content;
+            display: flex !important;
+           justify-content: center !important;
+           align-items: center !important;
+        }
+
+        .NavbarParentHeader>.AllPagesLinks>ul{
+            flex-direction: column;
+            width: fit-content;
+        }
+
+        .RightSizedBox{
+            order: -1;
+        }
+
+        .showMainPagesData{
+          visibility: visible !important;
+        } 
+
+}
+
+@media (max-width: 515px){
+    .mainPageUpperSection>div>.textSection{
+        font-size: 1.0rem;
+    }
+
+    .searchSection>.searchBar{
+        height: 70%;
+        border-radius: 13px;
+    }
+    
+    .searchSection>.searchBar>img{
+        height: 30%;
+    }
+    
+    .searchSection>.searchBar>input{
+        font-size: 8px;
+    }
+    
+    .searchSection>img{
+        height: 27% !important;
+    }
+
+    .MainPageLeftSection{
+        width: 50%;
+    }
+}

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../Asset/Logo.svg';
 import LogoutImag from '../Asset/logout.svg';
 
-const MainPagesNavbar = ({ data }) => {
+const MainPagesNavbar = ({ data, iconImag }) => {
 
   const [activeLink, setActiveLink] = useState(data[0][0]);
 
@@ -22,9 +22,10 @@ const MainPagesNavbar = ({ data }) => {
         <div className='subLinksSection'>
           <ul>
             {data.map((item, index) => (
-              <li key={index}>
-                <Link to={item[0]} onClick={(event) => handleLinkClick(event, item[0])}
-                  className={activeLink === item[0] ? 'activeSubLink' : ''}
+              <li key={index} onClick={(event) => handleLinkClick(event, item[0])}
+              className={activeLink === item[0] ? 'activeSubLink' : ''}>
+                <img className='sublinkIcon' src={iconImag[index]} alt="" />
+                <Link to={item[0]} 
                   >
                     {item[1]}</Link>
               </li>

@@ -1,64 +1,87 @@
-import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
-  const location = useLocation();
+  const [activeLink, setActiveLink] = useState('/');
 
-  useEffect(() => {
-    const links = document.querySelectorAll('.AllPagesLinks a');
-
-    links.forEach(link => {
-      link.classList.remove('MainPageActiveLink');
-      if (link.getAttribute('href') === location.pathname) {
-        link.classList.add('MainPageActiveLink');
-      }
-
-      link.addEventListener('click', handleLinkClick);
-    });
-
-    return () => {
-      links.forEach(link => {
-        link.removeEventListener('click', handleLinkClick);
-      });
-    };
-  }, [location.pathname]);
-
-  const handleLinkClick = (event) => {
-    const links = document.querySelectorAll('.AllPagesLinks a');
-    links.forEach(link => link.classList.remove('MainPageActiveLink'));
-    event.currentTarget.classList.add('MainPageActiveLink');
+  const handleLinkClick = (path) => {
+    setActiveLink(path);
   };
+
   return (
-   <>
+    <>
       <header className='NavbarParentHeader'>
-
-        <div className='LeftSizedBox'>
-
-        </div>
+        <div className='LeftSizedBox'></div>
 
         <nav className='AllPagesLinks'>
-            <ul>
-                  <li><Link to="/">Dashboard</Link></li>
-                  <li><Link to="report">Report</Link></li>
-                  <li><Link to="compliance">Compliance</Link></li>
-                  <li><Link to="alerts">Alerts</Link></li>
-                  <li><Link to="setting">Setting</Link></li>
-                  <li><Link to="support">Support</Link></li>
-              </ul>
+          <ul>
+            <li>
+              <Link
+                to="/"
+                className={activeLink === '/' ? 'MainPageActiveLink' : ''}
+                onClick={() => handleLinkClick('/')}
+              >
+                Dashboard
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/report"
+                className={activeLink === '/report' ? 'MainPageActiveLink' : ''}
+                onClick={() => handleLinkClick('/report')}
+              >
+                Report
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/compliance"
+                className={activeLink === '/compliance' ? 'MainPageActiveLink' : ''}
+                onClick={() => handleLinkClick('/compliance')}
+              >
+                Compliance
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/alerts"
+                className={activeLink === '/alerts' ? 'MainPageActiveLink' : ''}
+                onClick={() => handleLinkClick('/alerts')}
+              >
+                Alerts
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/setting"
+                className={activeLink === '/setting' ? 'MainPageActiveLink' : ''}
+                onClick={() => handleLinkClick('/setting')}
+              >
+                Setting
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/support"
+                className={activeLink === '/support' ? 'MainPageActiveLink' : ''}
+                onClick={() => handleLinkClick('/support')}
+              >
+                Support
+              </Link>
+            </li>
+          </ul>
         </nav>
 
         <div className='RightSizedBox'>
-            <div className='userSection'>
-              <div className='userImage'>
-              </div>
-              <div className='dropDown'>
-                  
-              </div>
-            </div>
+          <div className='userSection'>
+            <div className='userImage'></div>
+            <div className='dropDown'></div>
+          </div>
         </div>
-         
-
       </header>
-   </>
-  )
-}
+    </>
+  );
+};
+
+
+// MainPageActiveLink

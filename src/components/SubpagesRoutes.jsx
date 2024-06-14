@@ -1,3 +1,58 @@
+import mainEvent from '../Asset/dashboardImages/allEvents.svg';
+import dhcpLogs from '../Asset/dashboardImages/dhcp.svg';
+import dnsLogs from '../Asset/dashboardImages/dns.svg';
+import ldapLogs from '../Asset/dashboardImages/ldap.svg';
+import securityEvents from '../Asset/dashboardImages/security.svg';
+import linuxEvents from '../Asset/dashboardImages/linux.svg';
+import logSeverityEvents from '../Asset/dashboardImages/logseverity.svg';
+
+import allEvents from '../Asset/ReportImages/allEvents.svg';
+import trends from '../Asset/ReportImages/trendReport.svg';
+import deviceSeverity from '../Asset/ReportImages/deviceSeverity.svg';
+import systemEvents from '../Asset/ReportImages/systemEvents.svg';
+import linuxSetup from '../Asset/ReportImages/linux.svg';
+import manageIcon from '../Asset/ReportImages/manageReport.svg';
+
+import Risk from '../Asset/ComplianceImages/risk.svg';
+import Configuration from '../Asset/ComplianceImages/configured.svg';
+import Management from '../Asset/ComplianceImages/manage.svg';
+import ScheduleIcon from '../Asset/ComplianceImages/schedule.svg';
+
+import selctView from '../Asset/AlertImages/Select.svg';
+import addEmail from '../Asset/AlertImages/addEmailAlert.svg';
+import exportAs from '../Asset/AlertImages/exportAs.svg';
+import customAlerting from '../Asset/AlertImages/customAlert.svg';
+
+import logSetting from '../Asset/SettingImages/lodSetting.svg';
+import adminSetting from '../Asset/SettingImages/adminSetting.svg';
+import systemSetting from '../Asset/SettingImages/systemSetting.svg';
+
+
+export const DashboradIconsData = [
+   mainEvent, dhcpLogs, dnsLogs, ldapLogs, securityEvents, linuxEvents, logSeverityEvents
+];
+
+export const ReportIconsData = [
+   allEvents, trends, deviceSeverity, systemEvents, linuxSetup, manageIcon
+];
+
+export const ComplianceIconsData = [
+   Risk, Configuration, Management, ScheduleIcon
+];
+
+export const AlertIconsData = [
+    selctView, addEmail, exportAs, customAlerting
+];
+
+
+export const SettiingIconsData = [
+  logSetting, adminSetting, systemSetting
+];
+
+export const SupportIconsData = [
+  addEmail
+];
+
 //Dashboard page Routes
 export const DashboardRoutesLink = [
       ['/', 'Main Events'],
@@ -50,6 +105,3 @@ export const SettingsRoutesLinks = [
 export const SupportRoutesLinks = [
   ['/support/', 'No pages'],
 ];
-
-
-

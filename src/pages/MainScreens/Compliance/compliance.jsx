@@ -1,13 +1,13 @@
 import React from 'react';
 import { Outlet } from "react-router-dom";
-import { CompilanceRoutesLinks } from '../../../components/SubpagesRoutes';
+import { CompilanceRoutesLinks, ComplianceIconsData } from '../../../components/SubpagesRoutes';
 import MainPagesNavbar from '../../../components/mainPagesNavbar';
 import './Compliance.css';
 
 const compliancePage = () => {
   return (
     <div className='MainPage'>
-      <MainPagesNavbar data={CompilanceRoutesLinks}/>
+      <MainPagesNavbar data={CompilanceRoutesLinks} iconImag={ComplianceIconsData}/>
       <div className='MainPageRightSection'>
           <Outlet/>
         </div>

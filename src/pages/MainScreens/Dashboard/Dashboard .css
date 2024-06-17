@@ -1,5 +1,610 @@
-.Section{
-    width: 150;
-    height: 150;
-    background: red;
+.mainTableSection{
+    width: 97%;
+    height: 93%;
+    background: #FFFFFF;
+
+    border-radius: 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainTableSection>div{
+    height: 93%;
+    width: 97%;
+    /* border: 1px solid red; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    
+}
+
+.blackBG{
+    background: #000000;
+}
+
+.changeBG{
+    background: #99E1D9;
+}
+
+.alertBG {
+    background: #70ABAF;
+}
+
+.DHCPChartSection{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.dhcpChart{
+    width: 80%;
+    height: 65%;
+}
+
+.dhcpLagends{
+    width: 15%;
+    height: 60%;
+    padding-left: 2%;
+    /* background-color: red; */
+
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.Lagend{
+    /* background: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LagendIndication{
+    height: 18px;
+    width: 18px;
+    /* background: white; */
+    border-radius: 9px;
+
+    margin-right: 7px;
+}
+
+/* table action section such as load more data of table, delete table etc */
+.tabeActionsSection{
+    width: 100%;
+    height: 6.5%;
+    /* background: beige; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.Actions{
+    height: 100%;
+    background: #D9D9D9;
+    width: fit-content;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding-right: 1%;
+    padding-left: 1%;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.changePages{
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight:500;
+}
+
+.changeBtns{
+    width: fit-content;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.changeBtns>img{
+    height: 10px;
+    margin-left: 5px;
+}
+
+.hidePreBtn{
+    display: none;
+}
+
+.deleteBtn{
+    width: fit-content;
+    border-left: 0.5px solid #706a6a;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deleteBtn>img{
+   height: 13px;
+   margin-left: 7px;
+   margin-right: 7px;
+}
+
+.moreActionsBtn{
+    width: fit-content;
+    border-left: 0.5px solid #706a6a;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moreActionsBtn>img{
+   height: 15px;
+   margin-left: 10px;
+   margin-right: 2px;
+}
+
+.secondActions{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+/* main table data such as rows columns etc */
+.mainTableSection>div>.tableDataSection{
+    width: 100%;
+    height: 93.5%;
+    border: 1px solid #D9D9D9;
+    overflow: auto;
+
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+/* /////////////////////////////////////////////////////////////////////// ALL Tables Css ////////////////////////////////// */
+
+/* src/Table.css */
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.695em;
+
+}
+
+th, td {
+    /* padding: 2px; */
+    border-bottom: 1px solid #ddd;
+    padding-left: 10px;
+
+    /* height: 21.5px */
+}
+
+td {
+    background-color: #FFFFFF;
+}
+
+th {
+    background-color: #000000;
+    color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+td.tdBlue{
+    color: #00ACC1;
+}
+
+td.tdRed {
+    color: #F91010;
+}
+
+.SecurityTable{
+ height: 100%;
+}
+
+.SecurityTable tbody {
+    border: 1px solid #D9D9D9;
+}
+
+.SecurityTable th {
+    padding-bottom: 5px;
+    padding-top: 20px;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    position: static; /* Resets to the default position */
+    top: auto; /* Resets the top position */
+    z-index: auto; /* Resets the z-index */
+}
+
+.SecurityTable thead th:first-child{
+   border-top-left-radius: 10px;
+}
+
+.SecurityTable thead th:last-child{
+  border-top-right-radius: 10px;
+}
+
+.SecurityTable td{
+    font-size: 1rem;
+    font-weight: 520;
+}
+
+.EmptyKeyCell{
+ font-weight: 400 !important;
+}
+
+.ActionKeyCell{
+    color: #49dac6;
+}
+
+.countRatesImg{
+    height: 15px;
+    margin-right: 20px;
+}
+
+.loaderData{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 1.795em;
+    color: #37c1b1;
+}
+
+/* ///////////////////////////////////////////////////// Alert Css  ////////////////////////////////////////// */
+
+.alertBody{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+
+    /* overflow: auto; */
+    font-family: "Poppins", sans-serif;
+}
+
+.lastUpdateTime{
+   
+    font-size: 0.75em;
+    font-weight: 600;
+
+    width: 100%;
+    height: 3.5%;
+
+    margin-bottom: 10px;
+}
+
+.allUpdatesAlerts{
+    width: 100%;
+    height: 96.5%;
+
+    /* background-color: red; */
+
+    overflow: auto;
+}
+
+.Alert{
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.25);
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    
+
+    border-left: 12px solid black;
+}
+
+.messageSection{
+    color: #FFFFFF;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    width: 93.5%;
+}
+
+.alertDate{
+    font-size: 0.8rem;
+    color: #c3d1d0;
+}
+
+/* ///////////////////////////////////////////////////// Charts CSS //////////////////////////////////////// */
+.canvasjs-chart-credit {
+    display: none !important;
+}
+
+.canvasjs-chart-canvas{
+    /* background: #00ACC1; */
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+canvas:nth-child(2){
+    display: none !important;
+}
+
+.canvasjs-chart-container{
+    /* background: red; */
+    width: 100% !important;
+    height: 100% !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* This div is parent div of actuall Donut chart */
+.testChart > div {
+    height: 100% !important;
+}
+
+/* ///////////////////////////////////////// Linux Logs Section CSS ////////////////////////////////////////////////////// */
+
+.mainLinuxSection{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* background: red; */
+}
+
+.chartArea{
+    width: 100%;
+    height: 70% !important;
+
+    /* background: #99E1D9; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AllLogsSection{
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+    width: 50%;
+
+    /* background: red; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+.AllLogsSection>div {
+   font-size: 5rem;
+   font-weight: 600;
+}
+
+.logRate{
+    font-size: 1.6rem !important;
+    font-weight: 400 !important;
+}
+
+.logRate>img{
+    height: 20%;
+    margin-right: 10px;
+}
+
+
+.testChart{
+    padding-right: 80px;
+    width: 65% !important;
+    height: 85% !important;
+    /* background: red; */
+
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+}
+
+
+.dataPointsArea{
+    width: 60%;
+    height: 20%;
+
+    /* background: #00ACC1; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    /* padding-left: 15%;
+    padding-right: 25%; */
+}
+
+.DataPoint{
+    width: 20%;
+    height: 40%;
+    
+    /* background: #49dac6; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    
+    cursor: pointer;
+}
+
+.DataPoint>div{
+    width: 17px;
+    height: 17px;
+    /* background: #F91010; */
+    margin-right: 10px;
+
+    border-radius: 15px;
+}
+
+.success{
+  background-color:#248577;
+}
+
+.information{
+    background-color:#70ABAF;
+}
+
+.warning{
+  background: #df3535;
+}
+
+
+
+@media (max-width: 1310px) {
+        
+.DataPoint{
+    width: 30%;
+    height: 40%;
+    font-size: 13px;
+}
+
+        .DataPoint>div{
+            width: 15px;
+            height: 15px;
+        }
+
+}
+@media (max-width: 1165px) {
+    .AllLogsSection>div {
+        font-size: 3.5rem;
+     }
+     
+     .logRate{
+         font-size: 1.0rem !important;
+     }
+     
+     .logRate>img{
+         height: 15%;
+         margin-right: 8px;
+     }
+}
+@media (max-width: 1002px) {}
+@media (max-width: 875px) {
+    .AllLogsSection>div {
+        font-size: 3.0rem;
+     }
+     
+     .logRate{
+         font-size: 0.8rem !important;
+     }
+     
+     .logRate>img{
+         height: 12%;
+         margin-right: 5px;
+     }
+     .AllLogsSection{
+        padding-left: 50px;
+        width: 70%;
+    }
+}
+@media (max-width: 860px) {
+    .dhcpLagends{
+        font-size: 10px;
+    }
+}
+@media (max-width: 715px){}
+@media (max-width: 515px){
+   .changePages{
+    font-size: 0.6rem;
+   }
+
+   .chartArea{
+        flex-direction: column;
+        /* background: red; */
+    }
+
+    .AllLogsSection{
+        /* background: wheat; */
+        width: 100%;
+        height: 30%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .testChart{
+        width: 100% !important;
+        right: 0 !important;
+        margin-left: 100px;
+    }
+
+    .dataPointsArea{
+        /* background: red; */
+        width: 100%;
+        align-items: end;
+        justify-content: end;
+    }
+
+    .DataPoint{
+        margin-right: 10px;
+        font-size: 8px;
+    }
+
+    .DataPoint > div {
+        width: 9px;
+        height: 9px;
+    }
+
+    .dhcpLagends{
+        font-size: 5px;
+    }
+
+    .LagendIndication{
+        width: 10px;
+        height: 10px;
+    }
+
 }

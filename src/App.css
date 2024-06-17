@@ -331,7 +331,6 @@ position: absolute;
 .MainPageRightSection>.mainPageLowerDataSection{
     /* background-color: red; */
     height: 78.5%;
-    
     /* //Remove this css coding while designing actuall pages */
     display: flex;
     justify-content: center;

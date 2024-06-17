@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../Asset/Logo.svg';
 import LogoutImag from '../Asset/logout.svg';
 import manu from '../Asset/burgerManu.svg';
 
 const MainPagesNavbar = ({ data, iconImag }) => {
+  const navigate = useNavigate();
+  const navigateToChild = () => {
+    navigate('/');
+  }
+
 
   const [activeLink, setActiveLink] = useState(data[0][0]);
   const [showSidebar, setShowSidebar] = useState(false);
@@ -30,8 +35,8 @@ const MainPagesNavbar = ({ data, iconImag }) => {
            </div>
       <div className='upperSection'>
         <div className='logoSection'>
-          <img className='Logo' src={Logo} alt="" />
-          <div className='SiteName'>LOG SPECTRUM</div>
+          <img className='Logo' src={Logo} alt="" onClick={navigateToChild} />
+          <div className='SiteName' onClick={navigateToChild}>LOG SPECTRUM</div>
         </div>
 
         <div className='subLinksSection'>

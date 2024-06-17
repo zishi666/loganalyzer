@@ -105,3 +105,58 @@ export const SettingsRoutesLinks = [
 export const SupportRoutesLinks = [
   ['/support/', 'No pages'],
 ];
+
+
+//Data to set Hero Band Text in Table Component
+export const setPageName = (id) => {
+  return id === 'today-events-logs' 
+  ? 'Today Events Logs'
+  : id === 'today-dhcp-logs'
+        ? 'Today DHCP Logs'
+        :  id === 'today-dns-logs'
+              ? 'Today DNS Logs'
+              : id === 'today-ldap-logs'
+                  ? 'Today LDAP Logs'
+                  : id === 'logon-logs'
+                      ? 'Logon Logs' 
+                      : id === 'account-logon-logs'
+                            ? 'Account Logon Logs'
+                            : id === 'account-management-logs'
+                                 ? 'Account Management Logs'
+                                 : id === 'object-access-logs'
+                                    ? 'Object Access Logs'
+                                    : id === 'system-events-logs'
+                                        ? 'System Events Logs'
+                                        : id === 'policy-changes-logs'
+                                            ? 'Policy changes Logs'
+                                            : id === 'security-assessment-logs'
+                                                ? 'Security Assesment Logs'
+                                                : id === 'user-access-logs'
+                                                    ? 'User Access Logs'
+                                                    : id === 'success-logs'
+                                                        ? 'Success'
+                                                        : id === 'information-logs'
+                                                            ? 'Information'
+                                                            : id === 'warning-logs'
+                                                                ? 'Warning'
+                                                                : id === 'anamoly-logs' 
+                                                                    ? 'Anomaly Logs'
+                                                                    : id === 'recent-alerts'
+                                                                        ? 'Recent Alert'
+                                                                        : id === 'all-dhcp-logs'
+                                                                        ? 'All DHCP Logs'
+                                                                        : 'Test Screen';
+};
+
+
+//Security Events pages routes
+export const securityPagesRoutes = [
+  'logon-logs',
+  'account-logon-logs',
+  'account-management-logs',
+  'object-access-logs',
+  'system-events-logs',
+  'policy-changes-logs',
+  'security-assessment-logs',
+  'user-access-logs'
+];

@@ -56,107 +56,18 @@ export const TestComponent = () => {
             <section className={'mainTableSection ' + (id === 'anamoly-logs' ? 'changeBG' : id === 'recent-alerts' ? 'alertBG' : id === 'all-dhcp-logs' ? 'blackBG' : id === 'all-ldap-logs' ? 'blackBG' : '')}>
               {
                 id === 'recent-alerts' 
-                ? <div> 
-                      <AlertData />
-                  </div>
+                ? recentAlertPage()
                 :
                   id === 'all-dhcp-logs' 
-                  ? <div className='DHCPChartSection'>
-                        <div className='dhcpChart'>
-                            <DHCPBarChart/>
-                        </div>
-                        <div className='dhcpLagends'>
-                            {
-                              ldapLagends.map((lagend, index) => (
-                                
-                                  <div className='Lagend' key={index}>
-                                    <div className='LagendIndication' style={{background: `${lagend[0]}`}}>
-                                    </div>
-                                        {lagend[1]}
-                                  </div>
-                                
-                              ))
-                            }
-                        </div>
-                  </div>
+                  ? dhcpGraphPage()
                   :
                     id === 'all-dns-logs'
-                    ? <div className='DHCPChartSection'>
-                            <div className='dhcpChart'>
-                                <DHCPBarChart/>
-                            </div>
-                            <div className='dhcpLagends'>
-                                {
-                                  ldapLagends.map((lagend, index) => (
-                                    
-                                      <div className='Lagend' key={index}>
-                                        <div className='LagendIndication' style={{background: `${lagend[0]}`}}>
-                                        </div>
-                                            {lagend[1]}
-                                      </div>
-                                    
-                                  ))
-                                }
-                            </div>
-                      </div>
+                    ? dnsGraphPage()
                     :
                       id === 'all-ldap-logs'
-                      ? <div className='DHCPChartSection'>
-                            <div className='dhcpChart'>
-                                <DHCPBarChart/>
-                            </div>
-                            <div className='dhcpLagends'>
-                                {
-                                  ldapLagends.map((lagend, index) => (
-                                    
-                                      <div className='Lagend' key={index}>
-                                        <div className='LagendIndication' style={{background: `${lagend[0]}`}}>
-                                        </div>
-                                            {lagend[1]}
-                                      </div>
-                                    
-                                  ))
-                                }
-                            </div>
-                        </div>
+                      ? ldapGraphPage()
                       :
-                      <div>
-                              <div className='tabeActionsSection'>
-
-                                  <div className='Actions firstActions'>
-
-                                    {
-                                      totalPages <= 20 ? <div className="changePages">{totalPages}</div>
-                                                      : <div className="changePages"> {startPage} to {endPage} from {totalPages}</div>
-                                    } 
-
-                                      <div className="changeBtns">
-                                        <img src={Previous} alt="" onClick={decreasePages} disabled={startPage === 1}/>
-                                        <img src={Next} alt="" onClick={increasePages} disabled={endPage >= totalPages}/>
-                                      </div>
-
-                                      <div className="deleteBtn">
-                                        <img src={Delete} alt="" />
-                                      </div>
-
-                                      <div className="moreActionsBtn">
-                                        <img src={MoreActions} alt="" />
-                                      </div>
-
-                                  </div>
-
-                                  <div className='Actions secondActions'>
-                                      <div className="changePages">
-                                        Add/Remove Columns
-                                      </div>
-                                  </div>
-
-                              </div>
-
-                              <div className='tableDataSection'>
-                                <TableData pageID={id}/>
-                              </div>
-                      </div>
+                      allTablesDataPage()
               }
             </section>
 
@@ -164,4 +75,105 @@ export const TestComponent = () => {
         </div>
     </>
   )
+
+  function allTablesDataPage() {
+    return <div>
+      <div className='tabeActionsSection'>
+
+        <div className='Actions firstActions'>
+
+          {totalPages <= 20 ? <div className="changePages">{totalPages}</div>
+            : <div className="changePages"> {startPage} to {endPage} from {totalPages}</div>}
+
+          <div className="changeBtns">
+            <img src={Previous} alt="" onClick={decreasePages} disabled={startPage === 1} />
+            <img src={Next} alt="" onClick={increasePages} disabled={endPage >= totalPages} />
+          </div>
+
+          <div className="deleteBtn">
+            <img src={Delete} alt="" />
+          </div>
+
+          <div className="moreActionsBtn">
+            <img src={MoreActions} alt="" />
+          </div>
+
+        </div>
+
+        <div className='Actions secondActions'>
+          <div className="changePages">
+            Add/Remove Columns
+          </div>
+        </div>
+
+      </div>
+
+      <div className='tableDataSection'>
+        <TableData pageID={id} />
+      </div>
+    </div>;
+  }
+
+  function recentAlertPage() {
+    return <div>
+      <AlertData />
+    </div>;
+  }
+
+  function ldapGraphPage() {
+    return <div className='DHCPChartSection'>
+      <div className='dhcpChart'>
+        <DHCPBarChart />
+      </div>
+      <div className='dhcpLagends'>
+        {ldapLagends.map((lagend, index) => (
+
+          <div className='Lagend' key={index}>
+            <div className='LagendIndication' style={{ background: `${lagend[0]}` }}>
+            </div>
+            {lagend[1]}
+          </div>
+
+        ))}
+      </div>
+    </div>;
+  }
+
+  function dnsGraphPage() {
+    return <div className='DHCPChartSection'>
+      <div className='dhcpChart'>
+        <DHCPBarChart />
+      </div>
+      <div className='dhcpLagends'>
+        {ldapLagends.map((lagend, index) => (
+
+          <div className='Lagend' key={index}>
+            <div className='LagendIndication' style={{ background: `${lagend[0]}` }}>
+            </div>
+            {lagend[1]}
+          </div>
+
+        ))}
+      </div>
+    </div>;
+  }
+
+  function dhcpGraphPage() {
+    return <div className='DHCPChartSection'>
+      <div className='dhcpChart'>
+        <DHCPBarChart />
+      </div>
+      <div className='dhcpLagends'>
+        {ldapLagends.map((lagend, index) => (
+
+          <div className='Lagend' key={index}>
+            <div className='LagendIndication' style={{ background: `${lagend[0]}` }}>
+            </div>
+            {lagend[1]}
+          </div>
+
+        ))}
+      </div>
+    </div>;
+  }
 }

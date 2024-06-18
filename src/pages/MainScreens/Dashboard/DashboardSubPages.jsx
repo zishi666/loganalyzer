@@ -2,23 +2,25 @@ import React from 'react';
 import { useNavigate} from "react-router-dom";
 import { HeroBandSection } from '../../../components/HeroBandSection';
 import { TableData } from '../../../components/dashboardComponents/TableData';
-import { DonutChart, BarChart } from '../../../components/dashboardComponents/dashboardCharts';
+import { /*DonutChart,*/ BarChart } from '../../../components/dashboardComponents/dashboardCharts';
 import upLogs from '../../../Asset/dashboardImages/LinuxUpEvents.svg';
+import { MainPage } from '../../../components/dashboardComponents/MainPages';
 
 //Main Event define here
 export const MainEventsPage = () => {
-  const navigate = useNavigate();
-  const navigateToChild = (id) => {
-    navigate(`/${id}`);
-  }
+  // const navigate = useNavigate();
+  // const navigateToChild = (id) => {
+  //   navigate(`/${id}`);
+  // }
 
   return (
   <>
     <HeroBandSection text='Main Events'/>
     <div className='mainPageLowerDataSection'> 
-       <section className='mainTableSection'>
-            <div>
-                  <button onClick={() => navigateToChild('today-events-logs')}>Today Events Link</button>
+       <section className='mainTableSection MainDashboardPageSection'>
+            <div className='forMainPages'>
+                  {/* <button onClick={() => navigateToChild('today-events-logs')}>Today Events Link</button> */}
+                <MainPage />
             </div>
         </section>
     </div>
@@ -161,9 +163,9 @@ export const LinuxEventsPage = () => {
                             </div>
                     </div>
 
-                    <div className='testChart'>
+                    {/* <div className='testChart'>
                         <DonutChart />
-                    </div>
+                    </div> */}
                     
                   </div>
 

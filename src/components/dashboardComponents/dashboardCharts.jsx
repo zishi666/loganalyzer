@@ -22,7 +22,6 @@ export const DonutChart = () => {
 	
 }
 
-
 export const  BarChart = () => {
 		const options = {
 			animationEnabled: true,
@@ -99,5 +98,25 @@ export const DHCPBarChart = () => {
 	<div style={{width: '100%'}}>
 		<CanvasJSChart options = {options}/>
 	</div>
+	);
+}
+
+export const TodayLogsCharts = () => {
+	const options = {
+		animationEnabled: true,
+		data: [{
+			type: "doughnut",
+			dataPoints: [
+				{ name: "Success", y: 500, color: "#248577" },
+				{ name: "Information", y: 31, color: "#70ABAF" },
+				{ name: "Warning", y: 40, color: "#df3535" }
+			]
+		}]
+	}
+
+  return (
+		<div style={{width: '100%', height: '50%'}} className='testChart'>
+			<CanvasJSChart options = {options}/>
+		</div>
 	);
 }

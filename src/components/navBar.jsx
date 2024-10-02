@@ -1,36 +1,38 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import dropIcon from '../Asset/dropDown.svg';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import dropIcon from "../Asset/dropDown.svg";
 
 export const NavBar = () => {
-  const [activeLink, setActiveLink] = useState('/');
+  const [activeLink, setActiveLink] = useState("/");
   const [showBar, setShowBar] = useState(false);
 
   const handleLinkClick = (path) => {
     setActiveLink(path);
   };
+  // I added comment here to guid the user for following process
 
   const handleBarVisibility = () => {
     if (showBar) {
       setShowBar(false);
-    }
-    else{
+    } else {
       setShowBar(true);
     }
   };
 
   return (
     <>
-      <header className='NavbarParentHeader'>
-        <div className='LeftSizedBox'></div>
+      <header className="NavbarParentHeader">
+        <div className="LeftSizedBox"></div>
 
-        <nav className={'AllPagesLinks ' + (showBar ? 'showMainPagesData' : '')}>
+        <nav
+          className={"AllPagesLinks " + (showBar ? "showMainPagesData" : "")}
+        >
           <ul>
             <li>
               <Link
                 to="/"
-                className={activeLink === '/' ? 'MainPageActiveLink' : ''}
-                onClick={() => handleLinkClick('/')}
+                className={activeLink === "/" ? "MainPageActiveLink" : ""}
+                onClick={() => handleLinkClick("/")}
               >
                 Dashboard
               </Link>
@@ -38,8 +40,8 @@ export const NavBar = () => {
             <li>
               <Link
                 to="/report"
-                className={activeLink === '/report' ? 'MainPageActiveLink' : ''}
-                onClick={() => handleLinkClick('/report')}
+                className={activeLink === "/report" ? "MainPageActiveLink" : ""}
+                onClick={() => handleLinkClick("/report")}
               >
                 Report
               </Link>
@@ -47,8 +49,10 @@ export const NavBar = () => {
             <li>
               <Link
                 to="/compliance"
-                className={activeLink === '/compliance' ? 'MainPageActiveLink' : ''}
-                onClick={() => handleLinkClick('/compliance')}
+                className={
+                  activeLink === "/compliance" ? "MainPageActiveLink" : ""
+                }
+                onClick={() => handleLinkClick("/compliance")}
               >
                 Compliance
               </Link>
@@ -56,8 +60,8 @@ export const NavBar = () => {
             <li>
               <Link
                 to="/alerts"
-                className={activeLink === '/alerts' ? 'MainPageActiveLink' : ''}
-                onClick={() => handleLinkClick('/alerts')}
+                className={activeLink === "/alerts" ? "MainPageActiveLink" : ""}
+                onClick={() => handleLinkClick("/alerts")}
               >
                 Alerts
               </Link>
@@ -65,8 +69,10 @@ export const NavBar = () => {
             <li>
               <Link
                 to="/setting"
-                className={activeLink === '/setting' ? 'MainPageActiveLink' : ''}
-                onClick={() => handleLinkClick('/setting')}
+                className={
+                  activeLink === "/setting" ? "MainPageActiveLink" : ""
+                }
+                onClick={() => handleLinkClick("/setting")}
               >
                 Setting
               </Link>
@@ -74,8 +80,10 @@ export const NavBar = () => {
             <li>
               <Link
                 to="/support"
-                className={activeLink === '/support' ? 'MainPageActiveLink' : ''}
-                onClick={() => handleLinkClick('/support')}
+                className={
+                  activeLink === "/support" ? "MainPageActiveLink" : ""
+                }
+                onClick={() => handleLinkClick("/support")}
               >
                 Support
               </Link>
@@ -83,10 +91,10 @@ export const NavBar = () => {
           </ul>
         </nav>
 
-        <div className='RightSizedBox'>
-          <div className='userSection'>
-            <div className='userImage'></div>
-            <div className='dropDown'>
+        <div className="RightSizedBox">
+          <div className="userSection">
+            <div className="userImage"></div>
+            <div className="dropDown">
               <img onClick={handleBarVisibility} src={dropIcon} alt="" />
             </div>
           </div>
@@ -95,6 +103,5 @@ export const NavBar = () => {
     </>
   );
 };
-
 
 // MainPageActiveLink
